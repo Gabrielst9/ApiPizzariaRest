@@ -11,8 +11,8 @@ content-type: application/json
 {
     "nome" : "Abc da Silva",
     "descricao" : "bolinhas",
-    "foto" : "010101010",
-    "valor_unitario" : "1234567,00"
+    "foto" : "abc.png",
+    "valor_unitario" : "1.1"
 }
 
 ### Verbo PUT – atualiza
@@ -22,9 +22,9 @@ content-type: application/json
 {
     "nome" : "Abc da Silva",
     "descricao" : "bolinhas",
-    "foto" : "BLOBnoBanco",
-    "valor_unitario" : "1234567,00"
+    "foto" : "abc",
+    "valor_unitario" : "1.1"
 }
 
 ### Verbo DELETE - excluir
-DELETE http://127.0.0.1:8000/produto/3 HTTP/1.1
+DELETE http://127.0.0.1:8000/produto/10 HTTP/1.1
