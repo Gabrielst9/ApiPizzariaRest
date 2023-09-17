@@ -2,6 +2,10 @@ from fastapi import APIRouter
 
 from mod_produto.Produto import ProdutoModel
 
+#importacao da depencia da security
+from fastapi import Depends
+import security
+
 # import da persistência
 import db
 from mod_produto.ProdutoModel import ProdutoDB
@@ -10,6 +14,8 @@ router = APIRouter()
 
 # Criar as rotas/endpoints: GET, POST, PUT, DELETE
 
+# dependências de forma global
+router = APIRouter( dependencies=[Depends(security.verify_token), Depends(security.verify_key)] )
 
 # --------------------------------------------------------------------
 @router.get("/produto/", tags=["Produto"])
