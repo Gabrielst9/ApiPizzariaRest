@@ -2,11 +2,18 @@ from fastapi import APIRouter
 
 from mod_cliente.Cliente import ClienteModel
 
+#importacao da depencia da security
+from fastapi import Depends
+import security
+
 # import da persistência
 import db
 from mod_cliente.ClienteModel import ClienteDB
 
 router = APIRouter()
+
+# dependências de forma global
+router = APIRouter( dependencies=[Depends(security.verify_token), Depends(security.verify_key)] )
 
 # Criar os endpoints de Cliente: GET, POST, PUT, DELETE
 #--------------------------------------------------------------------
