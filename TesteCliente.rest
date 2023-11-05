@@ -14,8 +14,8 @@ content-type: application/json
     "telefone" : "49988234567",
     "matricula" : "12345",
     "compra_fiado" : 1,
-    "dia_fiado" : 1, 
-    "senha" : "bolinhas",
+    "dia_fiado" : 1,
+    "senha" : "bolinhas"
 }
 
 ### Verbo PUT – atualiza
