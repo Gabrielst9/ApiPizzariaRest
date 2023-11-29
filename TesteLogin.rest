@@ -1,0 +1,10 @@
+### Verbo POST 
+POST http://127.0.0.1:8000/login/ HTTP/1.1 
+x-token: abcBolinhasToken
+x-key: abcBolinhasKey
+content-type: application/json
+
+{ 
+    "cpf": "4",
+    "senha": "teste"
+}
