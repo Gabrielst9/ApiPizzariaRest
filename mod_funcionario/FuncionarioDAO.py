@@ -96,3 +96,4 @@ def delete_funcionario(id: int):
         return {"erro": str(e)}, 400
     finally:
         session.close()
+
